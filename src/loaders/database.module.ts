@@ -11,7 +11,6 @@ import { MongooseModule } from '@nestjs/mongoose';
                 try {
                     logger.log('language switcher connect to the database...');
 
-                    // this is mongoose connection options
                     const options = {
                         uri
                     };

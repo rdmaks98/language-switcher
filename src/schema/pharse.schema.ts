@@ -1,4 +1,3 @@
-// src/phrase/schemas/phrase.schema.ts
 import mongoose, { Schema, model, Document } from 'mongoose';
 import { phraseStatus } from '../enums/pharse.enum';
 

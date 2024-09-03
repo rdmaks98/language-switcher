@@ -3,7 +3,7 @@ import { PharseService } from './service/pharse.service';
 import { PharseController } from './controller/pharse.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import PhraseSchema from '../../schema/pharse.schema';
-import { ResponseHandlerService } from 'src/common/responseHandler.service';
+import { ResponseHandlerService } from '../../common/responseHandler.service';
 
 @Module({
   imports: [

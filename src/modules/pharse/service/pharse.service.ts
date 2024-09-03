@@ -2,13 +2,16 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 
+
 @Injectable()
 export class PharseService {
     constructor(
+        // get require model by injecting
         @InjectModel('Phrase') private readonly pharseModel,
     ) { }
 
 
+    // here fetch list of pharse
     async pharseList() {
         const phrase = await this.pharseModel.find().select('-translations');
         if (!phrase) {
@@ -17,6 +20,7 @@ export class PharseService {
         return phrase;
     }
 
+    // here fetch list of pharse by id
     async findById(id: string) {
         const phrase = await this.pharseModel.findById(id).select('-translations');
         if (!phrase) {
@@ -25,6 +29,7 @@ export class PharseService {
         return phrase;
     }
 
+    // here fetch list of pharse by id and translation value
     async findTranslation(id: string, lang: string) {
         const phraseResult = await this.pharseModel.findById(id, { [`translations.${lang}`]: 1 })
         if (!phraseResult) {
@@ -34,6 +39,7 @@ export class PharseService {
         return phraseResult;
     }
 
+    // here search a pharse by value,sorting with cretaed , sort by asc and filter by status
     async searchPharseByQuery(query, sortBy, sortOrder, status) {
 
         const searchQuery = {
