@@ -11,14 +11,20 @@ export class PharseController {
 
   @Get('/search')
   async searchPhrases(
+    @Res() res,
     @Query('query') query: string,
     @Query('sortBy') sortBy: string,
     @Query('sortOrder') sortOrder: 'asc' | 'desc',
     @Query('status') status: string,
   ) {
     try {
-      const results = await this.pharseService.searchPharseByQuery(query, sortBy, sortOrder, status);
-      return results;
+      const result = await this.pharseService.searchPharseByQuery(query, sortBy, sortOrder, status);
+      return this.responseService.sendSuccessResponse(
+        res,
+        result,
+        'get',
+        'pharse result with filter get Successfully',
+      );
     } catch (error) {
       throw new HttpException(error.message, HttpStatus.INTERNAL_SERVER_ERROR);
     }
