@@ -1,0 +1,132 @@
+[
+  {
+    "_id": {
+      "$oid": "66d7084d96e472faa4719361"
+    },
+    "phrase": "Hi, I'm a phrase",
+    "status": "active",
+    "createdAt": "2024-09-03T16:56:35+00:00",
+    "updatedAt": "2024-09-03T16:58:35+00:00",
+    "translations": {
+      "fr": "Salut, je suis une phrase",
+      "es": "hola soy una frase"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66d7084d96e472faa4719362"
+    },
+    "phrase": "Welcome to our service",
+    "status": "active",
+    "createdAt": "2024-09-03T16:57:35+00:00",
+    "updatedAt": "2024-09-03T16:57:35+00:00",
+    "translations": {
+      "fr": "Bienvenue dans notre service",
+      "es": "Bienvenido a nuestro servicio"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66d7084d96e472faa4719363"
+    },
+    "phrase": "How are you?",
+    "status": "active",
+    "createdAt": "2024-09-03T16:58:35+00:00",
+    "updatedAt": "2024-09-03T16:58:35+00:00",
+    "translations": {
+      "fr": "Comment ça va?",
+      "es": "¿Cómo estás?"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66d7084d96e472faa4719364"
+    },
+    "phrase": "Have a great day",
+    "status": "pending",
+    "createdAt": "2024-09-03T16:59:35+00:00",
+    "updatedAt": "2024-09-03T16:59:35+00:00",
+    "translations": {
+      "fr": "Passez une bonne journée",
+      "es": "Que tengas un gran día"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66d7084d96e472faa4719365"
+    },
+    "phrase": "Thank you for your patience",
+    "status": "active",
+    "createdAt": "2024-09-03T17:00:35+00:00",
+    "updatedAt": "2024-09-03T16:00:35+00:00",
+    "translations": {
+      "fr": "Merci pour votre patience",
+      "es": "Gracias por tu paciencia"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66d7084d96e472faa4719366"
+    },
+    "phrase": "Please contact support",
+    "status": "active",
+    "createdAt": "2024-09-03T17:00:35+00:00",
+    "updatedAt": "2024-09-03T17:00:35+00:00",
+    "translations": {
+      "fr": "Veuillez contacter le support",
+      "es": "Por favor contacte con el soporte"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66d7084d96e472faa4719367"
+    },
+    "phrase": "Your request is being processed",
+    "status": "pending",
+    "createdAt": "2024-09-03T17:01:35+00:00",
+    "updatedAt": "2024-09-03T17:01:35+00:00",
+    "translations": {
+      "fr": "Votre demande est en cours de traitement",
+      "es": "Tu solicitud está siendo procesada"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66d7084d96e472faa4719368"
+    },
+    "phrase": "We apologize for the inconvenience",
+    "status": "spam",
+    "createdAt": "2024-09-03T17:02:35+00:00",
+    "updatedAt": "2024-09-03T17:02:35+00:00",
+    "translations": {
+      "fr": "Nous nous excusons pour le désagrément",
+      "es": "Nos disculpamos por los inconvenientes"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66d7084d96e472faa4719369"
+    },
+    "phrase": "Your account has been updated",
+    "status": "active",
+    "createdAt": "2024-09-03T17:03:35+00:00",
+    "updatedAt": "2024-05-23T17:03:00+00:00",
+    "translations": {
+      "fr": "Votre compte a été mis à jour",
+      "es": "Tu cuenta ha sido actualizada"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66d7084d96e472faa471936a"
+    },
+    "phrase": "Password reset successfully",
+    "status": "active",
+    "createdAt": "2024-09-03T17:04:35+00:00",
+    "updatedAt": "2024-09-03T17:04:35+00:00",
+    "translations": {
+      "fr": "Réinitialisation du mot de passe réussie",
+      "es": "Contraseña restablecida con éxito"
+    }
+  }
+]

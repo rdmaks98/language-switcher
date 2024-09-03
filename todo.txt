@@ -1,0 +1,33 @@
+*folder structure*
+|
+-src 
+    | 
+     -common (in common folder we are create a most used service each and every module)
+    | 
+     -configuration ( here load config variable)
+    | 
+     -enums (as per needed we are handle enum file for every module)
+    | 
+     -loadres (here load a database file and as per requirement load the other file to import in the main file)
+    | 
+     -modules (here create modules as per requirement)
+    | 
+     -schema  (here create schema file as per requirement)
+-main.ts (this a main file for run a project and call all laodier file here)
+
+**Requirement Lists**
+
+- Nodejs - 20.15.1
+- Mongoose
+
+*Apis Lists*
+1. get phrase by id
+2. get pharse by id and language
+3. search pharse by word
+
+*postman reference*
+- link:  
+
+*how to run project sample*
+-> go to created proejct folder and run the using below cmd line
+    npm run start
