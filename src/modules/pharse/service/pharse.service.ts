@@ -42,17 +42,28 @@ export class PharseService {
     // here search a pharse by value,sorting with cretaed , sort by asc and filter by status
     async searchPharseByQuery(query, sortBy, sortOrder, status) {
 
-        const searchQuery = {
-            phrase: { $regex: query, $options: 'i' }, // Case-insensitive search
-            status: status,
-        };
+        const searchQuery: any = {};
 
-        const sortOptions = {};
+        // give phrase query in  query 
+        if (query) {
+            searchQuery.phrase = { $regex: query, $options: 'i' }; // Case-insensitive search
+        }
+
+        // filter status base fetch query
+        if (status) {
+            searchQuery.status = status;
+        }
+
+        // sorting options
+        const sortOptions: any = {};
         sortOptions[sortBy] = sortOrder === 'desc' ? -1 : 1;
 
-        const result = await this.pharseModel.find(searchQuery).sort(sortOptions)
+        // search query
+        const result = await this.pharseModel.find(searchQuery).sort(sortOptions).exec();
+
+        // Handle the case when no results are found
         if (result.length <= 0) {
-            throw new NotFoundException('this keyword value not exist')
+            throw new NotFoundException('This keyword value does not exist');
         }
         return result
     }
