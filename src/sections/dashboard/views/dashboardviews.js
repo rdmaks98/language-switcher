@@ -148,7 +148,6 @@ const Dashboardviews = () => {
               <MenuItem value="all">All</MenuItem>
               <MenuItem value="active">Active</MenuItem>
               <MenuItem value="pending">Pending</MenuItem>
-              <MenuItem value="inactive">Inactive</MenuItem>
               <MenuItem value="deleted">Deleted</MenuItem>
               <MenuItem value="spam">Spam</MenuItem>
               {/* Add more status options here if needed */}
