@@ -1,5 +1,4 @@
 import Iconify from "@/components/iconify/iconify";
-import { Icon } from "@iconify/react";
 import {
   FormControl,
   IconButton,
@@ -12,7 +11,7 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 const DashboardTable = ({ setResults, results, handleOpen }) => {
@@ -20,7 +19,7 @@ const DashboardTable = ({ setResults, results, handleOpen }) => {
 
   const handleLanguageChange = async (id, language, index) => {
     try {
-      // API call to fetch updated phrase
+      // here Call API to fetch result with translator phrase
       const response = await axios.get(
         `http://localhost:2024/pharse/${id}/${language}`
       );

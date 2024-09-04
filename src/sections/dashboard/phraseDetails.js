@@ -13,7 +13,6 @@ const PhraseModal = ({ open, onClose, phrase }) => {
           transform: "translate(-50%, -50%)",
           width: 400,
           bgcolor: "background.paper",
-          // border: "2px solid #000",
           boxShadow: 24,
           p: 1,
           display: "flex",
@@ -26,7 +25,7 @@ const PhraseModal = ({ open, onClose, phrase }) => {
           onClick={onClose}
           sx={{ alignSelf: "flex-end", color: "black" }}
         >
-          {/* <CloseIcon /> */}
+          <CloseIcon />
           <Iconify icon={"material-symbols:close"} />
         </IconButton>
         <Typography mb={5} variant="h6" fontWeight={700} component="h2">
@@ -34,9 +33,6 @@ const PhraseModal = ({ open, onClose, phrase }) => {
         </Typography>
         {phrase && (
           <>
-            {/* <Typography variant="body1">
-              <strong>ID:</strong> {phrase.id}
-            </Typography> */}
             <Typography variant="body1">
               <strong>Phrase:</strong> {phrase.phrase}
             </Typography>

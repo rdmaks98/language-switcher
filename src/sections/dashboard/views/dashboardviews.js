@@ -37,17 +37,17 @@ const Dashboardviews = () => {
   const doGetAllData = async (url) => {
     let endpoint = url;
 
-    // SortBy ane SortOrder ne check kari ne append karo
+    // sort by asc,desc and created,uodated
     if (sortBy) {
       endpoint += `sortBy=${sortBy}&sortOrder=${sortOrder}`;
     }
 
-    // Status ne check kari ne append karo
+    // filter by status get result
     if (status && status !== "all") {
       endpoint += `&status=${status}`;
     }
 
-    // Search term ne append karo agar available hoy
+    // search by title value
     if (searchTerm.length > 0) {
       endpoint += `&query=${searchTerm}`;
     }
@@ -117,7 +117,6 @@ const Dashboardviews = () => {
               <MenuItem value="createdAt">Created At</MenuItem>
               <MenuItem value="updatedAt">Updated At</MenuItem>
               <MenuItem value="phrase">Phrase</MenuItem>
-              {/* Add more options here if needed */}
             </Select>
           </FormControl>
           <FormControl
@@ -150,7 +149,6 @@ const Dashboardviews = () => {
               <MenuItem value="pending">Pending</MenuItem>
               <MenuItem value="deleted">Deleted</MenuItem>
               <MenuItem value="spam">Spam</MenuItem>
-              {/* Add more status options here if needed */}
             </Select>
           </FormControl>
         </Box>
