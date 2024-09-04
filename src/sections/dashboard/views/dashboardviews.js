@@ -8,6 +8,7 @@ import {
   FormControl,
   InputLabel,
   Box,
+  Typography,
 } from "@mui/material";
 import DashboardTable from "../dashboardTable";
 import axios from "axios";
@@ -71,67 +72,89 @@ const Dashboardviews = () => {
       <Box
         sx={{
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: "center",
           alignItems: "center",
           mx: "20px",
           my: "20px",
+          ml: 4,
+          flexDirection: "column",
+          backgroundColor: "#f1eeee",
+          borderRadius: "8px",
+          padding: "20px",
+          boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
         }}
       >
-        {" "}
-        <TextField
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Search phrases"
-        />
-        <FormControl
-          variant="outlined"
-          style={{ marginTop: "16px", minWidth: 120 }}
+        <Typography variant="h4" align="center" sx={{ mb: 4, color: "#333" }}>
+          Language Translator (Spanish & French)
+        </Typography>
+
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            width: "100%",
+          }}
         >
-          <InputLabel>Sort By</InputLabel>
-          <Select
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-            label="Sort By"
+          {" "}
+          <TextField
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Search phrases"
+            sx={{ width: "300px", ml: 4 }}
+          />
+          <FormControl
+            variant="outlined"
+            sx={{ minWidth: 150, ml: 2 }}
+            style={{ marginTop: "16px", minWidth: 120 }}
           >
-            <MenuItem value="createdAt">Created At</MenuItem>
-            <MenuItem value="updatedAt">Updated At</MenuItem>
-            <MenuItem value="phrase">Phrase</MenuItem>
-            {/* Add more options here if needed */}
-          </Select>
-        </FormControl>
-        <FormControl
-          variant="outlined"
-          style={{ marginTop: "16px", minWidth: 120, marginLeft: "16px" }}
-        >
-          <InputLabel>Sort Order</InputLabel>
-          <Select
-            value={sortOrder}
-            onChange={(e) => setSortOrder(e.target.value)}
-            label="Sort Order"
+            <InputLabel>Sort By</InputLabel>
+            <Select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+              label="Sort By"
+            >
+              <MenuItem value="createdAt">Created At</MenuItem>
+              <MenuItem value="updatedAt">Updated At</MenuItem>
+              <MenuItem value="phrase">Phrase</MenuItem>
+              {/* Add more options here if needed */}
+            </Select>
+          </FormControl>
+          <FormControl
+            variant="outlined"
+            sx={{ minWidth: 150, ml: 2 }}
+            style={{ marginTop: "16px", minWidth: 120, marginLeft: "16px" }}
           >
-            <MenuItem value="asc">Ascending</MenuItem>
-            <MenuItem value="desc">Descending</MenuItem>
-          </Select>
-        </FormControl>
-        <FormControl
-          variant="outlined"
-          style={{ marginTop: "16px", minWidth: 120, marginLeft: "16px" }}
-        >
-          <InputLabel>Status</InputLabel>
-          <Select
-            value={status}
-            onChange={(e) => setStatus(e.target.value)}
-            label="Status"
+            <InputLabel>Sort Order</InputLabel>
+            <Select
+              value={sortOrder}
+              onChange={(e) => setSortOrder(e.target.value)}
+              label="Sort Order"
+            >
+              <MenuItem value="asc">Ascending</MenuItem>
+              <MenuItem value="desc">Descending</MenuItem>
+            </Select>
+          </FormControl>
+          <FormControl
+            variant="outlined"
+            style={{ marginTop: "16px", minWidth: 120, marginLeft: "16px" }}
           >
-            <MenuItem value="all">All</MenuItem>
-            <MenuItem value="active">Active</MenuItem>
-            <MenuItem value="pending">Pending</MenuItem>
-            <MenuItem value="inactive">Inactive</MenuItem>
-            <MenuItem value="deleted">Deleted</MenuItem>
-            <MenuItem value="spam">Spam</MenuItem>
-            {/* Add more status options here if needed */}
-          </Select>
-        </FormControl>
+            <InputLabel>Status</InputLabel>
+            <Select
+              value={status}
+              onChange={(e) => setStatus(e.target.value)}
+              label="Status"
+            >
+              <MenuItem value="all">All</MenuItem>
+              <MenuItem value="active">Active</MenuItem>
+              <MenuItem value="pending">Pending</MenuItem>
+              <MenuItem value="inactive">Inactive</MenuItem>
+              <MenuItem value="deleted">Deleted</MenuItem>
+              <MenuItem value="spam">Spam</MenuItem>
+              {/* Add more status options here if needed */}
+            </Select>
+          </FormControl>
+        </Box>
       </Box>
       <DashboardTable
         results={results}

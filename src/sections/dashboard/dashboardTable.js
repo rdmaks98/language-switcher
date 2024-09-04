@@ -41,22 +41,42 @@ const DashboardTable = ({ setResults, results, handleOpen }) => {
   };
 
   return (
-    <Table>
+    <Table
+      sx={{
+        width: "100%",
+        marginTop: "20px",
+        backgroundColor: "#f9f9f9",
+        borderRadius: "8px",
+        marginLeft: 4,
+        boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
+      }}
+    >
       <TableHead>
         <TableRow>
-          <TableCell>ID</TableCell>
-          <TableCell>Phrase</TableCell>
-          <TableCell>Status</TableCell>
-          <TableCell>Action Button</TableCell>
-          <TableCell>Language</TableCell>
+          <TableCell align="center" sx={{ fontWeight: "bold" }}>
+            ID
+          </TableCell>
+          <TableCell align="center" sx={{ fontWeight: "bold" }}>
+            Phrase
+          </TableCell>
+          <TableCell align="center" sx={{ fontWeight: "bold" }}>
+            Status
+          </TableCell>
+          <TableCell align="center" sx={{ fontWeight: "bold" }}>
+            Action Button
+          </TableCell>
+          <TableCell align="center" sx={{ fontWeight: "bold" }}>
+            Language
+          </TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
         {results?.map((phrase, index) => (
           <TableRow key={phrase._id}>
-            <TableCell>{index + 1}</TableCell>
-            <TableCell>{phrase.phrase}</TableCell>
+            <TableCell align="center">{index + 1}</TableCell>
+            <TableCell align="center">{phrase.phrase}</TableCell>
             <TableCell
+              align="center"
               sx={{
                 color: phrase.status === "active" ? "green" : "red",
                 fontWeight: "600",
@@ -64,12 +84,12 @@ const DashboardTable = ({ setResults, results, handleOpen }) => {
             >
               {phrase.status.toUpperCase()}
             </TableCell>
-            <TableCell>
+            <TableCell align="center">
               <IconButton onClick={() => handleOpen(phrase)}>
                 <Iconify icon={"ph:eye-thin"} sx={{ color: "black" }} />
               </IconButton>
             </TableCell>
-            <TableCell>
+            <TableCell align="center">
               <FormControl
                 variant="outlined"
                 style={{ marginTop: "16px", minWidth: 120, marginLeft: "16px" }}
