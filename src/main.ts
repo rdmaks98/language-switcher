@@ -17,7 +17,7 @@ async function bootstrap() {
   app.enableCors();
 
   // Retrieve the PORT from a environment variables
-  const port = configService.get<number>('port') || 3000;
+  const port = configService.get<number>('port') || 4004;
 
   // listen a port and run the server
   await app.listen(port, () => {
